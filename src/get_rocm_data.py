@@ -11,7 +11,7 @@ def get_rocm_data() -> List[AcceleratorInfo]:
     try:
         rocml.smi_initialize()
     except Exception as e:
-        return accelerators  # Return empty list if initialization fails
+        return accelerators 
 
     try:
         device_count = rocml.smi_get_device_count()
