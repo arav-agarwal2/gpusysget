@@ -18,8 +18,9 @@ class AcceleratorInfo(BaseModel):
     topology: list[PCIEInfo] | None = None
 
 class SystemInfo(BaseModel):
+    """Generic system information."""
     processor_name: str
     accelerators: list[AcceleratorInfo]
-    software_details: str | None = None 
-    driver_versions: dict | None = None
+    software_details: str | None = None # Unimplemented.
+    driver_versions: dict | None = None # Unimplemented.
 
